@@ -22,7 +22,3 @@ flight_delete:
     path:     /{id}/delete
     defaults: { _controller: "WCSCoavBundle:Flight:delete" }
     methods:  DELETE
-
-wcs_coav_flight:
-        resource: "@WCSCoavBundle/Resources/config/routing/flight.yml"
-        prefix:   /flight

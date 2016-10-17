@@ -2,6 +2,10 @@ wcs_coav_planemodel:
     resource: "@WCSCoavBundle/Resources/config/routing/planemodel.yml"
     prefix:   /planemodel
 
+wcs_coav_flight:
+    resource: "@WCSCoavBundle/Resources/config/routing/flight.yml"
+    prefix:   /flight
+
 wcs_coav_homepage:
     path:     /
     defaults: { _controller: WCSCoavBundle:Default:index }
