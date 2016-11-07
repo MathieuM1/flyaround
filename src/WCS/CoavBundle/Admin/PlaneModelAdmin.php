@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: m21
- * Date: 18/10/16
- * Time: 10:26
- */
 
 namespace WCS\CoavBundle\Admin;
 
@@ -14,7 +8,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 
-class FlightAdmin extends Admin
+class PlaneModelAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
@@ -71,4 +65,3 @@ class FlightAdmin extends Admin
         ;
     }
 }
-
