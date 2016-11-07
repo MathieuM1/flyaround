@@ -9,6 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Flight
 {
+    Public function __toString()
+    {
+        return $this->pilot;
+    }
+
     /**
      * @var int
      */
@@ -191,5 +196,34 @@ class Flight
     public function getTakeofTime()
     {
         return $this->takeofTime;
+    }
+    /**
+     * @var \WCS\CoavBundle\Entity\Terrain
+     */
+    private $arrivals;
+
+
+    /**
+     * Set arrivals
+     *
+     * @param \WCS\CoavBundle\Entity\Terrain $arrivals
+     * @return Flight
+     */
+
+    public function setArrivals(\WCS\CoavBundle\Entity\Terrain $arrivals = null)
+    {
+        $this->arrivals = $arrivals;
+
+        return $this;
+    }
+
+    /**
+     * Get arrivals
+     *
+     * @return \WCS\CoavBundle\Entity\Terrain 
+     */
+    public function getArrivals()
+    {
+        return $this->arrivals;
     }
 }

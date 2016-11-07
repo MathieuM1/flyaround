@@ -22,6 +22,11 @@ class Flight
     /**
      * @var string
      */
+    private $planeModel;
+
+    /**
+     * @var string
+     */
     private $arrival;
 
     /**
@@ -71,6 +76,29 @@ class Flight
     public function getDeparture()
     {
         return $this->departure;
+    }
+
+    /**
+     * Set planeModel
+     *
+     * @param string $planeModel
+     * @return Flight
+     */
+    public function setplaneModel($planeModel)
+    {
+        $this->planeModel = $planeModel;
+
+        return $this;
+    }
+
+    /**
+     * Get planeModel
+     *
+     * @return string
+     */
+    public function getplaneModel()
+    {
+        return $this->planeModel;
     }
 
     /**

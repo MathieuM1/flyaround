@@ -30,4 +30,7 @@ WCS\CoavBundle\Entity\Flight:
             inversedBy: departures
         planeModel:
             targetEntity: WCS\CoavBundle\Entity\PlaneModel
+        arrivals:
+            targetEntity: WCS\CoavBundle\Entity\Terrain
+            inversedBy: arrival
 
