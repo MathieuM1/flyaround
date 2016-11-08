@@ -1,4 +1,13 @@
+
 <?php
+/**
+ * Created by PhpStorm.
+ * User: m21
+ * Date: 17/10/16
+ * Time: 21:28
+ */
+
+// src/WCS/CoavBundle/Admin/TerrainAdmin.php
 
 namespace WCS\CoavBundle\Admin;
 
@@ -8,17 +17,13 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 
-class PlaneModelAdmin extends Admin
+class TerrainAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('model')
-            ->add('manufacturer')
-            ->add('cruiseSpeed')
-            ->add('nbSeats')
-            ->add('status')
+            ->add('name')
         ;
     }
 
@@ -26,11 +31,7 @@ class PlaneModelAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('model')
-            ->add('manufacturer')
-            ->add('cruiseSpeed')
-            ->add('nbSeats')
-            ->add('status')
+            ->add('name')
         ;
     }
 
@@ -38,11 +39,7 @@ class PlaneModelAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('model')
-            ->add('manufacturer')
-            ->add('cruiseSpeed')
-            ->add('nbSeats')
-            ->add('status')
+            ->addIdentifier('name')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -57,11 +54,7 @@ class PlaneModelAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('model')
-            ->add('manufacturer')
-            ->add('cruiseSpeed')
-            ->add('nbSeats')
-            ->add('status')
+            ->add('name')
         ;
     }
 }

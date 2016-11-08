@@ -1,13 +1,9 @@
-services:
-#    wcs_coav.example:
-#        class: WCS\CoavBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
 
 services:
     app.admin.terrain:
         class: WCS\CoavBundle\Admin\TerrainAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Terrain", label: "Terrain" }
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Terrain" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\Terrain
@@ -16,7 +12,7 @@ services:
     app.admin.flight:
             class: WCS\CoavBundle\Admin\FlightAdmin
             tags:
-                - { name: sonata.admin, manager_type: orm, group: "Vol", label: "Flight" }
+                - { name: sonata.admin, manager_type: orm, group: "Content", label: "Flight" }
             arguments:
                 - ~
                 - WCS\CoavBundle\Entity\Flight
@@ -29,4 +25,13 @@ services:
             arguments:
                 - ~
                 - WCS\CoavBundle\Entity\PlaneModel
+                - ~
+
+    app.admin.reservation:
+            class: WCS\CoavBundle\Admin\ReservationAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Content", label: "Reservation" }
+            arguments:
+                - ~
+                - WCS\CoavBundle\Entity\Reservation
                 - ~

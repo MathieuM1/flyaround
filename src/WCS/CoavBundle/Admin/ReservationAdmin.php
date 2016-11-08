@@ -16,20 +16,14 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 
-class TerrainAdmin extends Admin
+class ReservationAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
             ->add('name')
-            ->add('icao')
-            ->add('latitude')
-            ->add('longitude')
-            ->add('city')
-            ->add('country')
-            ->add('departures')
-            ->add('arrivals')
+            ->add('nbSeats')
         ;
     }
 
@@ -38,9 +32,7 @@ class TerrainAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('icao')
-            ->add('city')
-            ->add('country')
+            ->add('nbSeats')
         ;
     }
 
@@ -48,10 +40,8 @@ class TerrainAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('icao')
-            ->add('city')
-            ->add('country')
+            ->add('name')
+            ->add('nbSeats')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -66,15 +56,10 @@ class TerrainAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('id')
             ->add('name')
-            ->add('icao')
-            ->add('latitude')
-            ->add('longitude')
-            ->add('city')
-            ->add('country')
-            ->add('departures')
-            ->add('arrivals')
+            ->add('nbSeats')
+            -add('id')
         ;
     }
 }
+
