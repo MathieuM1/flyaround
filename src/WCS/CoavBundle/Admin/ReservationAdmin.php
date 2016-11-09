@@ -1,12 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: m21
- * Date: 17/10/16
- * Time: 21:28
- */
-
-// src/WCS/CoavBundle/Admin/TerrainAdmin.php
+// src/WCS/CoavBundle/Admin/ReservationAdmin.php
 
 namespace WCS\CoavBundle\Admin;
 
@@ -56,10 +49,9 @@ class ReservationAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
+            ->add('id')
             ->add('name')
             ->add('nbSeats')
-            -add('id')
         ;
     }
 }
-

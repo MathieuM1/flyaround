@@ -1,13 +1,5 @@
-
 <?php
-/**
- * Created by PhpStorm.
- * User: m21
- * Date: 17/10/16
- * Time: 21:28
- */
-
-// src/WCS/CoavBundle/Admin/TerrainAdmin.php
+// src/WCS/CoavBundle/Admin/UserAdmin.php
 
 namespace WCS\CoavBundle\Admin;
 
@@ -17,7 +9,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 
-class TerrainAdmin extends Admin
+class UserAdmin extends Admin
 {
     // Fields to be shown on create/edit forms
     protected function configureFormFields(FormMapper $formMapper)
@@ -39,7 +31,7 @@ class TerrainAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
+            ->add('name')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
@@ -54,8 +46,8 @@ class TerrainAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
+            ->add('id')
             ->add('name')
         ;
     }
 }
-

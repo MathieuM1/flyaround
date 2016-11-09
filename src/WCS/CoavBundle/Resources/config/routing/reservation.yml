@@ -22,7 +22,3 @@ reservation_delete:
     path:     /{id}/delete
     defaults: { _controller: "WCSCoavBundle:Reservation:delete" }
     methods:  DELETE
-
-wcs_coav_reservation:
-    resource: "@WCSCoavBundle/Resources/config/routing/reservation.yml"
-    prefix:   /reservation

@@ -4,7 +4,6 @@ namespace WCS\CoavBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use WCS\CoavBundle\Entity\Reservation;
 use WCS\CoavBundle\Form\ReservationType;
 

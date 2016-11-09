@@ -8,7 +8,3 @@ terrain_show:
     defaults: { _controller: "WCSCoavBundle:Terrain:show" }
     methods:  GET
 
-wcs_coav_terrain:
-    resource: "@WCSCoavBundle/Resources/config/routing/terrain.yml"
-    prefix:   /terrain
-

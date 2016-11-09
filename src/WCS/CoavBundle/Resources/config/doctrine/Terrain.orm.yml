@@ -31,7 +31,8 @@ WCS\CoavBundle\Entity\Terrain:
         departures:
           targetEntity: WCS\CoavBundle\Entity\Flight
           mappedBy: departure
+
         arrivals:
           targetEntity: WCS\CoavBundle\Entity\Flight
-          mappedBy: arrivals
+          mappedBy: arrival
 

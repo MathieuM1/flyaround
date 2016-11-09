@@ -28,8 +28,6 @@ class TerrainAdmin extends Admin
             ->add('longitude')
             ->add('city')
             ->add('country')
-            ->add('departures')
-            ->add('arrivals')
         ;
     }
 
@@ -73,8 +71,6 @@ class TerrainAdmin extends Admin
             ->add('longitude')
             ->add('city')
             ->add('country')
-            ->add('departures')
-            ->add('arrivals')
         ;
     }
 }

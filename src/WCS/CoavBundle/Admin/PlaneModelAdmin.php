@@ -1,4 +1,5 @@
 <?php
+// src/WCS/CoavBundle/Admin/PlaneModelAdmin.php
 
 namespace WCS\CoavBundle\Admin;
 
@@ -57,6 +58,7 @@ class PlaneModelAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
+            ->add('id')
             ->add('model')
             ->add('manufacturer')
             ->add('cruiseSpeed')

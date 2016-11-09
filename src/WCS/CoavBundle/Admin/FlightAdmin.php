@@ -8,11 +8,13 @@
 
 namespace WCS\CoavBundle\Admin;
 
+use Doctrine\ORM\Mapping\Entity;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
+use WCS\CoavBundle\WCSCoavBundle;
 
 class FlightAdmin extends Admin
 {
@@ -24,7 +26,7 @@ class FlightAdmin extends Admin
             ->add('arrival')
             ->add('freeSeats')
             ->add('pilot')
-            ->add('takeofTime')
+            ->add('takeofTime', 'datetime')
         ;
     }
 

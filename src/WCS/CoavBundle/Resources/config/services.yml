@@ -3,7 +3,7 @@ services:
     app.admin.terrain:
         class: WCS\CoavBundle\Admin\TerrainAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Terrain" }
+            - { name: sonata.admin, manager_type: orm, group: "Aeroport", label: "Terrains" }
         arguments:
             - ~
             - WCS\CoavBundle\Entity\Terrain
@@ -12,7 +12,7 @@ services:
     app.admin.flight:
             class: WCS\CoavBundle\Admin\FlightAdmin
             tags:
-                - { name: sonata.admin, manager_type: orm, group: "Content", label: "Flight" }
+                - { name: sonata.admin, manager_type: orm, group: "Aeroport", label: "Vols" }
             arguments:
                 - ~
                 - WCS\CoavBundle\Entity\Flight
@@ -21,7 +21,7 @@ services:
     app.admin.model:
             class: WCS\CoavBundle\Admin\PlaneModelAdmin
             tags:
-                - { name: sonata.admin, manager_type: orm, group: "Content", label: "Plane Model" }
+                - { name: sonata.admin, manager_type: orm, group: "Aeroport", label: "Modèles d'avions" }
             arguments:
                 - ~
                 - WCS\CoavBundle\Entity\PlaneModel
@@ -30,8 +30,16 @@ services:
     app.admin.reservation:
             class: WCS\CoavBundle\Admin\ReservationAdmin
             tags:
-                - { name: sonata.admin, manager_type: orm, group: "Content", label: "Reservation" }
+                - { name: sonata.admin, manager_type: orm, group: "Client", label: "Reservations" }
             arguments:
                 - ~
                 - WCS\CoavBundle\Entity\Reservation
                 - ~
+    app.admin.user:
+                class: WCS\CoavBundle\Admin\UserAdmin
+                tags:
+                    - { name: sonata.admin, manager_type: orm, group: "Client", label: "Clients" }
+                arguments:
+                    - ~
+                    - WCS\CoavBundle\Entity\User
+                    - ~

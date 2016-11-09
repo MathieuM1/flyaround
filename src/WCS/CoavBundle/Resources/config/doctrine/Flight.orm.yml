@@ -9,9 +9,6 @@ WCS\CoavBundle\Entity\Flight:
             generator:
                 strategy: AUTO
     fields:
-        arrival:
-            type: string
-            length: '4'
         freeSeats:
             type: integer
             nullable: true
@@ -28,9 +25,16 @@ WCS\CoavBundle\Entity\Flight:
         departure:
             targetEntity: WCS\CoavBundle\Entity\Terrain
             inversedBy: departures
+
         planeModel:
             targetEntity: WCS\CoavBundle\Entity\PlaneModel
-        arrivals:
+
+        arrival:
             targetEntity: WCS\CoavBundle\Entity\Terrain
-            inversedBy: arrival
+            inversedBy: arrivals
+
+    oneToMany:
+        reservations:
+            targetEntity: WCS\CoavBundle\Entity\Reservation
+            mappedBy: flight
 
